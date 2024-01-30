@@ -2,8 +2,8 @@ import heapq
 
 
 def min_cost_to_connect_cables(cables):
+    cables = cables[:]
     heapq.heapify(cables)
-    total_cost = 0
 
     while len(cables) > 1:
         cable_1 = heapq.heappop(cables)
